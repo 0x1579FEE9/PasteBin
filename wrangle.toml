@@ -1,0 +1,7 @@
+name = "0x1579fee9-paste-bin"
+compatibility_date = "2026-08-02"
+workers_dev = false
+
+[assets]
+directory = ".vitepress/dist"
+not_found_handling = "404-page"
