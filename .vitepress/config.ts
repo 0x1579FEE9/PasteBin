@@ -1,16 +1,5 @@
 import { defineConfig } from "vitepress";
-import { pagefindPlugin } from 'vitepress-plugin-pagefind'
-
-function chineseSearchOptimize(input: string) {
-  const segmenter = new Intl.Segmenter('zh-CN', { granularity: 'word' })
-  const result: string[] = []
-  for (const it of segmenter.segment(input)) {
-    if (it.isWordLike) {
-      result.push(it.segment)
-    }
-  }
-  return result.join(' ')
-}
+import { pagefindPlugin, chineseSearchOptimize } from 'vitepress-plugin-pagefind'
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
