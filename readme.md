@@ -6,6 +6,34 @@
 
 提供的代码片段和解决步骤不一定是最佳的方法，请酌情考虑。
 
+## Trae Code 无法使用 Codex 插件
+
+可能具有时效性。
+
+改 `~/.trae-cn/extensions/openai.chatgpt-xxx/package.json`
+
+```json:line-numbers=192 {1}
+"views": {
+	"codexViewContainer": [
+		{
+			"id": "chatgpt.sidebarView",
+			"type": "webview",
+			"name": "Codex",
+			"when": "chatgpt.doesNotSupportSecondarySidebar"
+		}// [!code --]
+	],// [!code --]
+	"codexSecondaryViewContainer": [// [!code --]
+        }, // [!code ++]
+		{
+			"id": "chatgpt.sidebarSecondaryView",
+			"type": "webview",
+			"name": "Codex",
+			"when": "!chatgpt.doesNotSupportSecondarySidebar"
+		}
+	]
+},
+```
+
 ## 让 Windows 10 认为主板时间是 UTC
 
 ```cmd
