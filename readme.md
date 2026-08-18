@@ -10,7 +10,7 @@
 
 可能具有时效性。
 
-改 `~/.trae-cn/extensions/openai.chatgpt-xxx/package.json`
+改 `~/.trae-cn/extensions/openai.chatgpt-xxx/package.json`。编辑完后重启软件或者 F1 -> `Reload Window`。
 
 ```json:line-numbers=192 {1}
 "views": {
