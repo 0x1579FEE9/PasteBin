@@ -1,5 +1,5 @@
 import { defineConfig } from "vitepress";
-import { pagefindPlugin, chineseSearchOptimize } from 'vitepress-plugin-pagefind'
+import { pagefindPlugin, chineseSearchOptimize } from "vitepress-plugin-pagefind";
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
@@ -19,8 +19,16 @@ export default defineConfig({
     "readme.md": "index.md",
   },
   vite: {
-    plugins: [pagefindPlugin({
-      customSearchQuery: chineseSearchOptimize
-    })],
-  }
+    plugins: [
+      pagefindPlugin({
+        customSearchQuery: chineseSearchOptimize,
+      }),
+      {
+        transform: (code, id) =>
+          id.includes("tui") && id.endsWith(".css")
+            ? code.replace(/--vp-tui-font-family\s*:[^;]+;?\s*/g, "")
+            : null,
+      },
+    ],
+  },
 });

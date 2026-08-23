@@ -24,7 +24,7 @@ cmake --build build -j --config Release
 
 下载 whisper 和 vad 模型，并确保音频格式支持。
 
-```cml
+```cmd
 wget2 https://huggingface.co/ggml-org/whisper-vad/resolve/main/ggml-silero-v6.2.0.bin -O D:\ggml-silero-v6.2.0.bin
 wget2 https://huggingface.co/ggerganov/whisper.cpp/resolve/main/ggml-large-v3-turbo-q8_0.bin -O D:\ggml-large-v3-turbo-q8_0.bin
 ffmpeg -i D:\target.mp4 D:\target.mp3

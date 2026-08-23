@@ -7,14 +7,15 @@
     "preview": "vitepress preview .",
     "format": "prettier --write ."
   },
-  "devDependencies": {
-    "prettier": "^3.8.1",
-    "typescript": "^6.0.3",
-    "vitepress": "1.6.4"
-  },
   "dependencies": {
     "pagefind": "^1.5.2",
     "vitepress-plugin-pagefind": "^0.4.24",
     "vitepress-theme-tui": "^0.0.13"
+  },
+  "devDependencies": {
+    "oxfmt": "^0.64.0",
+    "prettier": "^3.8.1",
+    "typescript": "^6.0.3",
+    "vitepress": "1.6.4"
   }
 }
