@@ -17,6 +17,7 @@
 
 ```bash
 git clone https://github.com/ggml-org/whisper.cpp.git --depth 1
+cd whisper.cpp
 cmake -B build -DGGML_CUDA=1
 cmake --build build -j --config Release
 ```
