@@ -6,9 +6,36 @@
 
 提供的代码片段和解决步骤不一定是最佳的方法，请酌情考虑。
 
-## Trae Code 无法使用 Codex 插件
+## 通过 whisper.cpp 使用 OpenAI Whisper 语音识别模型
 
-可能具有时效性。
+- whisper.cpp: https://github.com/ggml-org/whisper.cpp
+- ggml whisper 模型：https://huggingface.co/ggerganov/whisper.cpp
+- ggml vad 模型：https://huggingface.co/ggml-org/whisper-vad
+- CUDA Toolkit: https://developer.nvidia.com/cuda-downloads
+
+为了启用 NVIDIA GPU support，需要手动编译 whisper.cpp 。在 Windows 上确保安装了 MSVC C++ 与 CUDA Toolkit。
+
+```bash
+git clone https://github.com/ggml-org/whisper.cpp.git --depth 1
+cmake -B build -DGGML_CUDA=1
+cmake --build build -j --config Release
+```
+
+下载 whisper 和 vad 模型，并确保音频格式支持。
+
+```cml
+wget2 https://huggingface.co/ggml-org/whisper-vad/resolve/main/ggml-silero-v6.2.0.bin -O D:\ggml-silero-v6.2.0.bin
+wget2 https://huggingface.co/ggerganov/whisper.cpp/resolve/main/ggml-large-v3-turbo-q8_0.bin -O D:\ggml-large-v3-turbo-q8_0.bin
+ffmpeg -i D:\target.mp4 D:\target.mp3
+```
+
+使用 vad 搭配 wisper 模型，指定语言并输出 srt 格式字幕文件。
+
+```cmd
+build\bin\Release\whisper-cli.exe -osrt --vad -vm D:\ggml-silero-v6.2.0.bin -m D:\ggml-small.bin -l zh -d D:\target.mp3
+```
+
+## Trae Code 无法使用 Codex 插件
 
 改 `~/.trae-cn/extensions/openai.chatgpt-xxx/package.json`。编辑完后重启软件或者 F1 -> `Reload Window`。
 
