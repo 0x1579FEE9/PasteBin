@@ -70,7 +70,7 @@ reg add HKLM\SYSTEM\CurrentControlSet\Control\TimeZoneInformation /v RealTimeIsU
 
 ## 在 Git 中自动忽略 CMake 构建目录
 
-#C #CMake #Git
+`#C` `#CMake` `#Git`
 
 第一种方法是让 cmake 自动在构建目录生成 `.gitignore` 忽略那个目录下的所有文件。
 
@@ -87,7 +87,7 @@ build*/
 
 ## C 工程交叉编译（CMake + Zig + Ninja)
 
-#C #CMake
+`#C` `#CMake
 
 Zig 语言的编译器也是一个支持开箱即用的交叉编译的 C/C++ 编译器。Ninja 非必需。
 
@@ -108,7 +108,7 @@ $ cmake --build build-win
 
 ## VSCode 中 CMake Tools 插件默认自动使用 VS 工具链，与现有环境不同导致报错
 
-#C #VSCode #CMake
+`#C` `#VSCode` `#CMake`
 
 在 `.vscode/settings.json` 手动指定生成器。
 
