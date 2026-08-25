@@ -10,7 +10,7 @@
   "dependencies": {
     "pagefind": "^1.5.2",
     "vitepress-plugin-pagefind": "^0.4.24",
-    "vitepress-theme-tui": "^0.0.13"
+    "vitepress-theme-tui": "0.0.13"
   },
   "devDependencies": {
     "oxfmt": "^0.64.0",
