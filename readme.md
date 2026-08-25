@@ -102,7 +102,7 @@ build*/
 
 ## C 工程交叉编译（CMake + Zig + Ninja)
 
-`#C` `#CMake
+`#C` `#CMake`
 
 Zig 语言的编译器也是一个支持开箱即用的交叉编译的 C/C++ 编译器。Ninja 非必需。
 
