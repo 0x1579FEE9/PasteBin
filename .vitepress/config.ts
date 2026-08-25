@@ -26,7 +26,7 @@ export default defineConfig({
       {
         transform: (code, id) =>
           id.includes("tui") && id.endsWith(".css")
-            ? code.replace(/--vp-tui-font-family\s*:[^;]+;?\s*/g, "")
+            ? code.replace("font-family:var(--vp-tui-font-family)!important", "")
             : null,
       },
     ],
