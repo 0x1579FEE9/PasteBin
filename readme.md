@@ -6,6 +6,21 @@
 
 提供的代码片段和解决步骤不一定是最佳的方法，请酌情考虑。
 
+## 使用第三方 notepad 替代 windows notepad
+
+- https://github.com/zufuliu/notepad4
+
+win 自带 notepad 虽然方便但不够用。选用 notepad4 是因为有中文，有黑暗模式，而且可以从 scoop 安装。
+
+打开 `regedit` ，前往 `计算机\HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Image File Execution Options`，创建项 `notepad.exe`。
+
+添加 字符串 类型，内容为 notepad4 的目录，并带上 `/z` 参数。比如：
+
+```
+C:\Users\[用户名]\scoop\shims\notepad4.exe /z
+```
+
+
 ## 通过 whisper.cpp 使用 OpenAI Whisper 语音识别模型
 
 - whisper.cpp: https://github.com/ggml-org/whisper.cpp
