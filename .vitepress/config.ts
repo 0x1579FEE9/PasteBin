@@ -9,7 +9,10 @@ export default defineConfig({
   cleanUrls: true,
   themeConfig: {
     outline: "deep",
-    sidebar: [],
+    sidebar: [
+      { text: "首页", link: "/" },
+      { text: "Pastebin", link: "/pastebin" },
+    ],
     socialLinks: [{ icon: "github", link: "https://github.com/0x1579FEE9" }],
     footer: {
       message: `<a href="https://beian.miit.gov.cn/" rel="noreferrer" target="_blank">粤ICP备2026007027号-2</a>`,
