@@ -1,5 +1,12 @@
 # Pastebin
 
+## 为 Rebased v1.1.14 添加中文
+
+本自同根生。
+
+- https://github.com/DetachHead/rebased/
+- https://github.com/buffcow/AndroidStudioChineseLanguagePack/
+
 ## 使用第三方 notepad 替代 windows notepad
 
 - https://github.com/zufuliu/notepad4
