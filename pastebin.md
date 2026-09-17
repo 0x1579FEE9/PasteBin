@@ -2,12 +2,16 @@
 
 ## 为 Rebased v1.1.14 添加中文
 
+`#Git`
+
 本自同根生。
 
 - https://github.com/DetachHead/rebased/
 - https://github.com/buffcow/AndroidStudioChineseLanguagePack/
 
 ## 使用第三方 notepad 替代 windows notepad
+
+`#Windows` `#Notepad`
 
 - https://github.com/zufuliu/notepad4
 
@@ -23,6 +27,8 @@ C:\Users\[用户名]\scoop\shims\notepad4.exe /z
 
 
 ## 通过 whisper.cpp 使用 OpenAI Whisper 语音识别模型
+
+`#AI`
 
 - whisper.cpp: https://github.com/ggml-org/whisper.cpp
 - ggml whisper 模型：https://huggingface.co/ggerganov/whisper.cpp
@@ -52,33 +58,10 @@ ffmpeg -i D:\target.mp4 D:\target.mp3
 build\bin\Release\whisper-cli.exe -osrt --vad -vm D:\ggml-silero-v6.2.0.bin -m D:\ggml-small.bin -l zh -d D:\target.mp3
 ```
 
-## Trae Code 无法使用 Codex 插件
-
-改 `~/.trae-cn/extensions/openai.chatgpt-xxx/package.json`。编辑完后重启软件或者 F1 -> `Reload Window`。
-
-```json:line-numbers=192 {1}
-"views": {
-	"codexViewContainer": [
-		{
-			"id": "chatgpt.sidebarView",
-			"type": "webview",
-			"name": "Codex",
-			"when": "chatgpt.doesNotSupportSecondarySidebar"
-		}// [!code --]
-	],// [!code --]
-	"codexSecondaryViewContainer": [// [!code --]
-        }, // [!code ++]
-		{
-			"id": "chatgpt.sidebarSecondaryView",
-			"type": "webview",
-			"name": "Codex",
-			"when": "!chatgpt.doesNotSupportSecondarySidebar"
-		}
-	]
-},
-```
 
 ## 让 Windows 10 认为主板时间是 UTC
+
+`#Windows` `#Registry`
 
 ```cmd
 reg add HKLM\SYSTEM\CurrentControlSet\Control\TimeZoneInformation /v RealTimeIsUniversal /t REG_DWORD /d 1
